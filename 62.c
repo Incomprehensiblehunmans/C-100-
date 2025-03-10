@@ -2,15 +2,17 @@
 //利用指针方法。
 
 #include <stdio.h>
+#include "swap.h"
 
-//交换函数
-void swap(int *x,int *y){  
 
-    int temp = *x;
-    *x = *y;
-    *y = temp;
+// //交换函数
+// void swap(int *x,int *y){  
 
-}
+//     int temp = *x;
+//     *x = *y;
+//     *y = temp;
+
+// }
 
 int main(){
 
@@ -19,8 +21,9 @@ int main(){
     pa = &a;
     pb = &b;
     pc = &c;
-    printf("enter three words:\n");
+    printf("enter three numbers:\n");
     scanf("%d %d %d",&a,&b,&c);
+    
     if (a>b){
         swap(pa,pb);
     }
@@ -31,7 +34,7 @@ int main(){
         swap(pb,pc);
     }
 
-    printf("form small to large:%d <%d <%d",a,b,c);
+    printf("from small to large: %d < %d < %d\n", a, b, c);
 
 
 }
